@@ -19,6 +19,9 @@ ok: [Ubuntu-srv]
 TASK [Copia la clae pública] ***************************************************
 ok: [Ubuntu-srv]
 
+TASK [Deshabilitar autenticación por contraseña en SSH] ************************
+changed: [Ubuntu-srv]
+
 PLAY RECAP *********************************************************************
-Ubuntu-srv                 : ok=6    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+Ubuntu-srv                 : ok=7    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
 
