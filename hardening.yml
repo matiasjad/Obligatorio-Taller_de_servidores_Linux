@@ -1,0 +1,32 @@
+---
+- name: Deploy apache web server on Centos
+  hosts: Ubuntu
+  become: true
+  
+  tasks:
+
+  - name: Instalar UFW
+    ansible.builtin.apt:
+      name: ufw
+      state: present
+  
+  - name: Bloquuea todo el trafico entrante
+    community.general.ufw:
+      rule: deny
+      direction: in
+
+  - name: Permite trafico SSH
+    community.general.ufw:
+      rule: allow
+      port: '22'
+      proto: tcp
+
+  - name: Habilitar UFW
+    community.general.ufw:
+      state: enabled
+      
+  - name: Copia la clae pública
+    ansible.builtin.authorized_key:
+      user: sysadmin
+      state: present
+      key: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQC8kn8kdwLCVApz4p1n6HqNcX1WUQRW7ulM8CnoeruhBtiwzY70B5sgpqhGGvSBWYPNqfcipECTUcnoCXDiUsYBlTffz/Be9XNNiDISxSYSBjAlfGWP9PAwUQclv9zq1HMIY514nD4WkJ1Pc7THyfOAZ4frHEb1fFn2eFjHVBR4QkQ0Gvsz2C3cnDEMONrl4fe83RD7qWP15bLQI/rP8Hp68CtQQaH3FJj1RhllO/kkMPfpQimk+X+ycjItwjAmicB8x+d5vm4FobtgaiH7VWulUj58kJ4tL8sHn9xwHiuBuzrNmxa38/KMuueEPQ53yPizNQ2D3wT3F+NhWDWuYK2iqvGi8oYzKgY855d6I2Tt9veRvnY911eeIn5EKmq0Htl++QBsIlaTu80zzfdg5VcmfRL04B/i6a0lDkOeRAvOo3HLdBUx2KhNzWOsw0By9JIEt740818AwpUZylEz/fbWScDYfQnfVtUNRJLgtfWdCDwZ/WmRNDWlpCGW9hgRlHU= sysadmin@vbox"

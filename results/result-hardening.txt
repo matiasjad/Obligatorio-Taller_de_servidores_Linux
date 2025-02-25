@@ -1,0 +1,24 @@
+
+PLAY [Deploy apache web server on Centos] **************************************
+
+TASK [Gathering Facts] *********************************************************
+ok: [Ubuntu-srv]
+
+TASK [Instalar UFW] ************************************************************
+ok: [Ubuntu-srv]
+
+TASK [Bloquuea todo el trafico entrante] ***************************************
+ok: [Ubuntu-srv]
+
+TASK [Permite trafico SSH] *****************************************************
+ok: [Ubuntu-srv]
+
+TASK [Habilitar UFW] ***********************************************************
+ok: [Ubuntu-srv]
+
+TASK [Copia la clae pública] ***************************************************
+ok: [Ubuntu-srv]
+
+PLAY RECAP *********************************************************************
+Ubuntu-srv                 : ok=6    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+
