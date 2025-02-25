@@ -30,20 +30,24 @@ Se realizó la prueba con el siguiente comando
 ####  1 Verifica el tiempo de actividad (uptime) en todos los servidores.
 
     Ansible -i inventories/inventory.ini all -m command -a "uptime" 
-    
+
+![Tarea 2 - I.png](https://github.com/matiasjad/Obligatorio-Taller_de_servidores_Linux/raw/main/results/images/Tarea%202%20-%20I.png)
 <br>
 
 #### 2  Instala apache en los servidores web.
 
 
     ansible -i inventories/inventory.ini WebServer -m command -a "yum install httpd -y" -become  --ask-become-pass
+![Tarea 2 - II.png](https://github.com/matiasjad/Obligatorio-Taller_de_servidores_Linux/blob/main/results/images/Tarea%202%20-%20II.png)
+![Tarea 2 - II+.png](https://github.com/matiasjad/Obligatorio-Taller_de_servidores_Linux/raw/main/results/images/Tarea%202%20-%20II%2B.png)
+![Tarea 2 - II++.png](https://github.com/matiasjad/Obligatorio-Taller_de_servidores_Linux/blob/main/results/images/Tarea%202%20-%20II%2B%2B.png)
 
 <br>
 
 #### 3 Recupera el uso de espacio en disco de los servidores ubuntu.
 
     ansible -i inventories/inventory.ini Ubuntu -m command -a “df -h”
-
+![Tarea 2 - III.png](https://github.com/matiasjad/Obligatorio-Taller_de_servidores_Linux/blob/main/results/images/Tarea%202%20-%20III.png)
 <br>
 <br>
 
