@@ -22,6 +22,9 @@ Se realizó la prueba con el siguiente comando
      ansible all -i inventory.ini -m ping 
 
 ![Prueba ansible ping.png](https://github.com/matiasjad/Obligatorio-Taller_de_servidores_Linux/raw/main/results/images/Prueba%20ansible%20ping.png)
+
+<br>
+<br>
 <br>
 <br>
 
@@ -29,7 +32,7 @@ Se realizó la prueba con el siguiente comando
 
 ####  1 Verifica el tiempo de actividad (uptime) en todos los servidores.
 
-    Ansible -i inventories/inventory.ini all -m command -a "uptime" 
+    ansible -i inventories/inventory.ini all -m command -a "uptime" 
 
 ![Tarea 2 - I.png](https://github.com/matiasjad/Obligatorio-Taller_de_servidores_Linux/raw/main/results/images/Tarea%202%20-%20I.png)
 <br>
@@ -48,6 +51,10 @@ Se realizó la prueba con el siguiente comando
 
     ansible -i inventories/inventory.ini Ubuntu -m command -a “df -h”
 ![Tarea 2 - III.png](https://github.com/matiasjad/Obligatorio-Taller_de_servidores_Linux/blob/main/results/images/Tarea%202%20-%20III.png)
+
+<br>
+<br>
+<br>
 <br>
 
 ## Tarea 3: Crear y ejecutar playbook de Ansible
@@ -63,6 +70,35 @@ El resultado de la ejecución del comando se encuentra en "results/result-harden
 A continuación adjunto la evidencia de la configruación en el servidor Ubuntu
 ![Hardening.png](https://github.com/matiasjad/Obligatorio-Taller_de_servidores_Linux/blob/main/results/images/Hardening.png)
 
+<br>
+<br>
+<br>
+<br>
+
+## Preguntas:
+#### 1. ¿Qué es Ansible y por qué es "sin agente" (agentless)?
+Ansible es una plataforma de automatización que permite configurar, ejecutar comandos y tareas.
+Ideal para tareas repetitivas y/o masivas
+El termino agentless hace referencia a que no necesita que se instale un software (agente) en cada sistema que se requiera administrar.
+
+#### 2. Explica la diferencia entre un comando ad-hoc y un playbook.
+Un comando ad-hoc es una instrucción de una linea, genralmente utilizado para tareas sencillas, como por ejemplo traer el uptime de un servidor.
+Un playbook es un archivo YML que contiene un conjunto de tareas, utilizado en tareas más complejas o reutilizables.
 
 
-##
+#### 3. ¿Qué es la idempotencia y por qué es importante en Ansible?
+La idempotencia es la propiedad que se encarga de producir el mismo resultado sin importar cuantas veces se ejecute.
+Si ya tengo el estado deseado, queda tal cual está, y en caso de que no sea el estado desado, realiza cambios para lograrlo.
+
+#### 4. ¿Cómo funcionan los handlers y cuándo deberías usarlos?
+Los handlers son tareas que se ejecutan solo cuando son notificadas, esto mediante el parámetro "notify".
+Los handlers se ejecutan al final de un playbook,ya que primero se debe corroborar que sean invocados por una tarea especifica.
+
+#### 5. ¿Cómo verificas errores de sintaxis en un playbook de Ansible?
+Los errores de sintaxis se chequean con:
+
+    ansible-playbook --syntax-check
+
+En el caso de chequear el playbook web_setup.yml sería de la siguiente manera:
+
+    ansible-playbook -i inventories/inventory.ini web_setup.yml --syntax-check
