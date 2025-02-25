@@ -21,7 +21,7 @@ Se realizó la prueba con el siguiente comando
 
      ansible all -i inventory.ini -m ping 
 
-![Prueba ansible ping.png]([URL_de_la_imagen](https://github.com/matiasjad/Obligatorio-Taller_de_servidores_Linux/blob/main/results/images/Prueba%20ansible%20ping.png))
+![Prueba ansible ping.png](https://github.com/matiasjad/Obligatorio-Taller_de_servidores_Linux/raw/main/results/images/Prueba%20ansible%20ping.png)
 <br>
 <br>
 
