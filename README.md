@@ -3,7 +3,7 @@
 
 ## Tarea 1: Configurar un archivo de inventario de Ansible
 Se crea un archivo inventory.ini con los siguientes grupos:
-```bash
+```ini
 [Centos]
 Centos-srv ansible_host=192.168.56.20
 
