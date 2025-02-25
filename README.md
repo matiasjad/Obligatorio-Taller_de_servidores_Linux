@@ -3,7 +3,7 @@
 
 ## Tarea 1: Configurar un archivo de inventario de Ansible
 Se crea un archivo inventory.ini con los siguientes grupos:
- ```bash
+```bash
 [Centos]
 Centos-srv ansible_host=192.168.56.20
 
@@ -16,7 +16,7 @@ Ubuntu
 
 [WebServer:children]
 Centos
- ````
+```
 
 Se realizó la prueba con el siguiente comando
 ```bash
@@ -40,7 +40,6 @@ Se realizó la prueba con el siguiente comando
 
 <br>
 
-
 #### 2  Instala apache en los servidores web.
 
 ```bash
@@ -51,8 +50,6 @@ Se realizó la prueba con el siguiente comando
 ![Tarea 2 - II++.png](https://github.com/matiasjad/Obligatorio-Taller_de_servidores_Linux/blob/main/results/images/Tarea%202%20-%20II%2B%2B.png)
 
 <br>
-<br>
-<br>
 
 #### 3 Recupera el uso de espacio en disco de los servidores ubuntu.
 ```bash
@@ -60,6 +57,7 @@ Se realizó la prueba con el siguiente comando
 ```
 ![Tarea 2 - III.png](https://github.com/matiasjad/Obligatorio-Taller_de_servidores_Linux/blob/main/results/images/Tarea%202%20-%20III.png)
 
+<br>
 <br>
 <br>
 <br>
@@ -111,9 +109,15 @@ En el caso de chequear el playbook web_setup.yml sería de la siguiente manera:
     ansible-playbook -i inventories/inventory.ini web_setup.yml --syntax-check
 ```
 
+<br>
+<br>
+<br>
+<br>
+
  ## Errores a tener en cuenta...
 Tuve un error al intentar ejecutar el ping de la Tarea 1
 ![Errror por SSH.png](https://github.com/matiasjad/Obligatorio-Taller_de_servidores_Linux/raw/main/results/images/Errror%20por%20SSH.png)
+
 Esto es causado por no copiar la clave pública en los servidores
 Para copiarlo:
 ```bash
