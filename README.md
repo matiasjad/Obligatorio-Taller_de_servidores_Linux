@@ -49,15 +49,19 @@ Se realizó la prueba con el siguiente comando
     ansible -i inventories/inventory.ini Ubuntu -m command -a “df -h”
 ![Tarea 2 - III.png](https://github.com/matiasjad/Obligatorio-Taller_de_servidores_Linux/blob/main/results/images/Tarea%202%20-%20III.png)
 <br>
-<br>
 
 ## Tarea 3: Crear y ejecutar playbook de Ansible
 
 #### web_setup.yml
-
-
+El resultado de la ejecución del comando se encuentra en "results/result-web_setup.txt"
+A continuación adjunto la evidencia del acceso a la pagina de prueba www.ejemplo.com
+![www.ejemplo.com.png](https://github.com/matiasjad/Obligatorio-Taller_de_servidores_Linux/raw/main/results/images/www.ejemplo.com.png)
+<br>
 
 #### hardening.yml
+El resultado de la ejecución del comando se encuentra en "results/result-hardening.txt"
+A continuación adjunto la evidencia de la configruación en el servidor Ubuntu
+![Hardening.png](https://github.com/matiasjad/Obligatorio-Taller_de_servidores_Linux/blob/main/results/images/Hardening.png)
 
 
 
