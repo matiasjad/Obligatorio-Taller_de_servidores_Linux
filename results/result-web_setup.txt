@@ -1,0 +1,39 @@
+
+PLAY [Deploy apache web server on Centos] **************************************
+
+TASK [Gathering Facts] *********************************************************
+ok: [Centos-srv]
+
+TASK [Install apache (httpd)] **************************************************
+ok: [Centos-srv]
+
+TASK [Servicio apache (httpd) iniciado] ****************************************
+ok: [Centos-srv]
+
+TASK [Agregar servicios al firewall] *******************************************
+ok: [Centos-srv]
+
+TASK [Agregar registro al archivo host] ****************************************
+ok: [Centos-srv -> localhost]
+
+TASK [Modificar configuración de apache] ***************************************
+ok: [Centos-srv]
+
+TASK [Existe directorio para configurar virtualhost] ***************************
+ok: [Centos-srv]
+
+TASK [Existe directorio para alojar el sitio] **********************************
+ok: [Centos-srv]
+
+TASK [Configuracion de virtual host] *******************************************
+ok: [Centos-srv]
+
+TASK [Existe archivo indice estandar] ******************************************
+changed: [Centos-srv]
+
+TASK [Pagina indice generada por template] *************************************
+changed: [Centos-srv]
+
+PLAY RECAP *********************************************************************
+Centos-srv                 : ok=11   changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+
