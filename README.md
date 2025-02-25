@@ -21,7 +21,14 @@ collections
 
 <br>
 <br>
-
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 ## Tarea 1: Configurar un archivo de inventario de Ansible
 Se crea un archivo inventory.ini con los siguientes grupos:
  ````
