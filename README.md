@@ -1,11 +1,17 @@
 # Obligatorio Taller de Servidores Linux
 
 **Universidad ORT**
+
 **Carrera**: Analista en Infraestructura
+
 **Materia:** Taller de Servidores Linux
+
 **Estudiante:** Matías Alvarez 
+
 **N° Estudiante**: 306127
+
 **Fecha de entrega:** 25/02/2025
+
 <br>
 <br>
 
