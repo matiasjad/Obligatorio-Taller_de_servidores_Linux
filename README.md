@@ -1,34 +1,6 @@
 # Obligatorio Taller de Servidores Linux
 
 
-## Estructura del repositorio
-collections
-├── requirements.yml
-├── hardening.yml
-├── inventories
-│   ├── group_vars
-│   │   ├── linux.yml
-│   ├── inventory.ini
-├── LICENSE
-├── README.md
-├── results
-│   ├── result-hardening.txt
-│   ├── result-web_setup.txt
-├── templates
-│   ├── index.j2
-│   ├── virtualhost.j2
-├── web_setup.yml
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
 ## Tarea 1: Configurar un archivo de inventario de Ansible
 Se crea un archivo inventory.ini con los siguientes grupos:
  ````
