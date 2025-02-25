@@ -119,6 +119,7 @@ Tuve un error al intentar ejecutar el ping de la Tarea 1
 ![Errror por SSH.png](https://github.com/matiasjad/Obligatorio-Taller_de_servidores_Linux/raw/main/results/images/Errror%20por%20SSH.png)
 
 Esto es causado por no copiar la clave pública en los servidores
+
 Para copiarlo:
 ```bash
     ssh sysadmin@192.168.56.20
